@@ -22,10 +22,10 @@ Developed as a group project for CEF346 - Object Oriented Programming, Faculty o
 * Patient registration and profile management
 * Appointment scheduling and doctor assignment
 * Electronic medical records management
-* laboratory test ordering and result tracking
-* Prescription ceation and medication dispensing
+* Laboratory test ordering and result tracking
+* Prescription creation and medication dispensing
 * Invoice generation and payment processing
-* Role-based aces control for all staff types
+* Role-based access control for all staff types
 * Financial report generation
 
 \---
@@ -45,7 +45,7 @@ Developed as a group project for CEF346 - Object Oriented Programming, Faculty o
 Before you can run this project, make sure you have the following installed:
 
 * Java Development Kit (JDK) 17 or higher
-* A working Visual Studio Code environment or any other development environment
+* A working Visual Studio Code environment or any other development environment of your choice 
 * Git
 
 \---
@@ -82,7 +82,7 @@ Each role sees only the modules relevant (or accessible) to their function.
 |Eyong Ngoe Willy Kertis|FE24A274|
 |Nkemkeng Blessing Ntsafac|FE24A346|
 |Wemnje Caleb Mbanji Wepnyu|FE24A388|
-
+|Cho Success | FE24A245 |
 \---
 
 # Academic Context

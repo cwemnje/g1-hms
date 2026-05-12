@@ -82,7 +82,8 @@ Each role sees only the modules relevant (or accessible) to their function.
 |Eyong Ngoe Willy Kertis|FE24A274|
 |Nkemkeng Blessing Ntsafac|FE24A346|
 |Wemnje Caleb Mbanji Wepnyu|FE24A388|
-|Cho Success | FE24A245 |
+|Cho Success Mbo | FE24A245 |
+|NDZO NGUM JOACHIM | FE24A331 |
 \---
 
 # Academic Context

@@ -1,6 +1,7 @@
 package views;
 
 import auth.AuthService;
+import auth.User;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -18,60 +19,81 @@ public class LoginFX extends Application {
     @Override
     public void start(Stage stage) {
 
-        // Title
-        Label title = new Label("Hospital Management System");
+        Label title =
+                new Label("Hospital Management System");
 
-        // Username Field
-        TextField usernameField = new TextField();
-        usernameField.setPromptText("Enter Username");
+        TextField usernameField =
+                new TextField();
 
-        // Password Field
-        PasswordField passwordField = new PasswordField();
-        passwordField.setPromptText("Enter Password");
+        usernameField.setPromptText(
+                "Enter Username");
 
-        // Login Button
-        Button loginButton = new Button("Login");
+        PasswordField passwordField =
+                new PasswordField();
 
-        // Button Action
+        passwordField.setPromptText(
+                "Enter Password");
+
+        Button loginButton =
+                new Button("Login");
+
         loginButton.setOnAction(e -> {
 
-            String username = usernameField.getText();
-            String password = passwordField.getText();
+            String username =
+                    usernameField.getText();
 
-            boolean success =
-                    AuthService.login(username, password);
+            String password =
+                    passwordField.getText();
 
-            if (success) {
+            User user =
+                    AuthService.login(
+                            username,
+                            password
+                    );
+
+            if (user != null) {
 
                 Alert alert =
-                        new Alert(Alert.AlertType.INFORMATION);
+                        new Alert(
+                                Alert.AlertType.INFORMATION
+                        );
 
-                alert.setTitle("Login Success");
+                alert.setTitle(
+                        "Login Success"
+                );
 
                 alert.setHeaderText(null);
 
                 alert.setContentText(
-                        "Welcome to HMS!");
+                        "Welcome "
+                        + user.getUsername()
+                        + "\nRole: "
+                        + user.getRole()
+                );
 
                 alert.showAndWait();
 
             } else {
 
                 Alert alert =
-                        new Alert(Alert.AlertType.ERROR);
+                        new Alert(
+                                Alert.AlertType.ERROR
+                        );
 
-                alert.setTitle("Login Failed");
+                alert.setTitle(
+                        "Login Failed"
+                );
 
                 alert.setHeaderText(null);
 
                 alert.setContentText(
-                        "Invalid Username or Password!");
+                        "Invalid Username or Password!"
+                );
 
                 alert.showAndWait();
             }
         });
 
-        // Layout
         VBox root = new VBox(15);
 
         root.setAlignment(Pos.CENTER);
@@ -83,8 +105,8 @@ public class LoginFX extends Application {
                 loginButton
         );
 
-        // Scene
-        Scene scene = new Scene(root, 400, 300);
+        Scene scene =
+                new Scene(root, 400, 300);
 
         stage.setTitle("HMS Login");
 
@@ -94,6 +116,7 @@ public class LoginFX extends Application {
     }
 
     public static void main(String[] args) {
+
         launch(args);
     }
 }

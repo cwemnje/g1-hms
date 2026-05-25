@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 
 public class AuthService {
 
-    public static boolean login(String username, String password) {
+    public static User login(String username, String password) {
 
         try {
 
@@ -21,33 +21,47 @@ public class AuthService {
                     conn.prepareStatement(query);
 
             pst.setString(1, username);
+
             pst.setString(2, password);
 
             ResultSet rs = pst.executeQuery();
 
             if (rs.next()) {
 
+                User user = new User(
+
+        1,
+
+        rs.getString("username"),
+
+        rs.getString("password"),
+
+        rs.getString("role")
+);
                 System.out.println("Login Successful!");
+
                 System.out.println("Welcome: "
                         + rs.getString("full_name"));
 
                 System.out.println("Role: "
                         + rs.getString("role"));
 
-                return true;
+                return user;
 
             } else {
 
                 System.out.println("Invalid Username or Password!");
-                return false;
+
+                return null;
             }
 
         } catch (Exception e) {
 
             System.out.println("Login Error!");
+
             e.printStackTrace();
 
-            return false;
+            return null;
         }
     }
 }

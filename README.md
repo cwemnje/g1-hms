@@ -49,22 +49,21 @@ hospital-management-system/
 │   ├── main/
 │   │   ├── java/
 │   │   │   └── com/hms/
-│   │   │       ├── Main.java                  # JavaFX entry point
-│   │   │       ├── controllers/               # JavaFX screen controllers
-│   │   │       ├── database/                  # PostgreSQL connection
-│   │   │       ├── models/                    # Java classes (Patient, Doctor, etc.)
-│   │   │       ├── services/                  # Business logic layer
-│   │   │       ├── test/                      # System test program
-│   │   │       └── utils/                     # IDGenerator, PasswordHasher
+│   │   │       ├── Main.java        # JavaFX entry point
+│   │   │       ├── controllers/     # JavaFX screen controllers
+│   │   │       ├── database/        # PostgreSQL connection
+│   │   │       ├── models/          # Java classes (Patient, Doctor, etc.)
+│   │   │       ├── services/        # Business logic layer
+│   │   │       ├── test/            # System test program
+│   │   │       └── utils/           # IDGenerator, PasswordHasher
 │   │   └── resources/
 │   │       └── com/hms/
-│   │           ├── fxml/                      # JavaFX UI layout files
-│   │           ├── images/                    # Logo and icons
-│   │           └── styles/                    # CSS stylesheets
+│   │           ├── fxml/            # JavaFX UI layout files
+│   │           ├── images/          # Logo and icons
+│   │           └── styles/          # CSS stylesheets
 │
-├── database.sql                               # Full PostgreSQL schema
-├── pom.xml                                    # Maven configuration
-└── README.md
+├── database.sql                     # Full PostgreSQL schema                 
+└── pom.xml                          # Maven configuration
 
 ---
 

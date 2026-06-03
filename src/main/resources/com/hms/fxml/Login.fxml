@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.hms.controllers.LoginController"
+           styleClass="root-pane">
+
+    <VBox styleClass="login-card" maxWidth="420"
+          StackPane.alignment="CENTER">
+
+        <!-- Logo -->
+        <VBox styleClass="login-header" alignment="CENTER">
+            <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
+                <image>
+                    <Image url="@../images/hms_logo.png"/>
+                </image>
+            </ImageView>
+            <Label text="Hospital Management System" styleClass="subtitle-text"/>
+        </VBox>
+
+        <!-- Form -->
+        <VBox styleClass="login-form" spacing="16">
+
+            <VBox spacing="6">
+                <Label text="Staff ID" styleClass="field-label"/>
+                <TextField fx:id="userIdField"
+                           promptText="Enter your Staff ID (e.g. HMSD001)"
+                           styleClass="input-field"/>
+            </VBox>
+
+            <VBox spacing="6">
+                <Label text="Password" styleClass="field-label"/>
+                <PasswordField fx:id="passwordField"
+                              promptText="Enter your password"
+                              styleClass="input-field"/>
+            </VBox>
+
+            <!-- Error message -->
+            <Label fx:id="errorLabel"
+                   styleClass="error-label"
+                   wrapText="true"
+                   visible="false"/>
+
+            <!-- Login button -->
+            <Button fx:id="loginButton"
+                    text="Login"
+                    styleClass="login-button"
+                    maxWidth="Infinity"
+                    onAction="#handleLogin"/>
+
+        </VBox>
+
+        <padding>
+            <Insets top="40" bottom="40" left="40" right="40"/>
+        </padding>
+
+    </VBox>
+
+</StackPane>

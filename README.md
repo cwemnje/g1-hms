@@ -1,4 +1,4 @@
-\# Hospital Management System (HMS)
+# Hospital Management System (HMS)
 
 A desktop-based Hospital Management System built in Java with JavaFX and PostgreSQL. Designed to automate core hospital operations including patient registration, appointment scheduling, laboratory management, pharmacy, and billing.
 
@@ -216,5 +216,3 @@ On launch you will be prompted to log in with a Staff ID and password. Each role
 - **Faculty:** Faculty of Engineering and Technology
 - **Department:** Department of Computer Engineering
 ---
-
-## Project Structure
